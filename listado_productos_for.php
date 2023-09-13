@@ -36,6 +36,9 @@ $aProductos[] =array(
 
 );
 
+
+
+
 //print_r($aProductos);
 
 ?>
@@ -72,10 +75,11 @@ $aProductos[] =array(
 						<tbody>
 
 							<?php 
-							$contador = 0;
-							$sumatoriaPrecio= 0;
-							while ($contador < 3 ){
-								$sumatoriaPrecio += $aProductos[$contador]["precio"]; ?>
+							$contador=0;
+							$sumatoriaPrecio=0;
+							for ($contador= 0; $contador < count($aProductos); $contador++ ){
+									$sumatoriaPrecio += $aProductos[$contador]["precio"];
+								 ?>
 									<tr>
 											<td><?php  echo $aProductos[$contador]["nombre"] ; ?></td>
 											<td><?php  echo $aProductos[$contador]["marca"] ; ?></td>
@@ -83,13 +87,17 @@ $aProductos[] =array(
 											<td><?php  echo $aProductos[$contador]["stock"] > 10 ? "Hay stock":($aProductos[$contador]["stock"] > 0 && $aProductos[$contador]["stock"] <=  10 ? " poco stock" : " no  hay stock"); ?></td>
 											<td><?php  echo $aProductos[$contador]["precio"] ; ?></td>
 											<td><button class="btn btn-primary">Comprar</button></td>
+											
+											
 									</tr>
 									
 							<?php 
-							$contador++;
-							 }?>
+						
+						
+							 }
+							 ?>
 
-						</tbody>
+						</tbody>		
 
 					</table>
 				</div>
