@@ -3,6 +3,29 @@ ini_set('display_errors', 1);
 ini_set("display_startup_errors", 1);
 error_reporting(E_ALL);
 
+$cantidad = 0;
+do {
+	echo$cantidad;
+	$cantidad --;
+} while($cantidad > 0);
+
+/*$contador = 5;
+while($contador > 0){
+	echo $contador;
+	$contador--;
+}
+*/
+
+/*$stock = 10;
+
+while ($stock >0){
+	echo "El stock es $stock<br>";
+	$stock--;
+}
+
+echo "stock aogotado";
+*/
+
 
 /*$miArray = array();
 $miArray[0] =array();
@@ -47,11 +70,6 @@ if($bVariable == true){
 }*/
 
 
-
-$edad = 19;
-if($edad>=18){
-	echo "Es mayor de edad";
-}
 
 
 
